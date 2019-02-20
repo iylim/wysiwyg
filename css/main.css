@@ -4,6 +4,9 @@
 @import "editor.css";
 @import "add-button.css";
 
+@import "./components/editor.css";
+@import "./components/editable-text.css";
+
 html {
   background-color: #151019;
   background: url(../assets/trianglify.png);
