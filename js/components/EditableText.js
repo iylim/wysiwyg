@@ -44,6 +44,7 @@ export default class EditableText extends HTMLElement {
     }
   }
 
+
   render() {
     this.innerHTML = `
       <button type="button" class="edit-button">Edit</button>
@@ -55,5 +56,6 @@ export default class EditableText extends HTMLElement {
     // actions up
     this.querySelectorAll('.edit-button, .save-button').forEach(button => button.addEventListener('click', this.toggleActive));
     this.querySelector('wysiwyg-editor').addEventListener('input', this.handleInput);
+    this.addEventListener('delete', () => this.remove());
   }
 }

@@ -34,7 +34,7 @@ export default class Editor extends HTMLElement {
     <section class="styles">
       <div class="form-group">
         <label>              Font color:
-            <input type="color" name="color"/>
+          <input type="color" name="color"/>
         </label>
       </div>
 
@@ -55,8 +55,11 @@ export default class Editor extends HTMLElement {
           </select>
         </label>
       </div>
+      
+      <button name="delete" type="button" class="delete-button">Delete</button>
     </section>
     `;
+    this.querySelector('.delete-button').addEventListener('click', event => event.target.dispatchEvent(new CustomEvent('delete', {bubbles:true})));
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
