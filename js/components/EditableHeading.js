@@ -26,11 +26,10 @@ export default class EditableHeading extends EditableText {
     // actions up
     this.querySelectorAll('.edit-button, .save-button').forEach(button => button.addEventListener('click', this.toggleActive));
     this.querySelector('wysiwyg-editor').addEventListener('input', this.handleInput);
+    this.addEventListener('delete', () => this.remove());
   }
+  
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
 }
-
-//delete button with customElement
-//event.target.parentNode.remove();
