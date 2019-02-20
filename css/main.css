@@ -6,6 +6,7 @@
 
 @import "./components/editor.css";
 @import "./components/editable-text.css";
+@import "./components/editable-heading.css";
 
 html {
   background-color: #151019;
