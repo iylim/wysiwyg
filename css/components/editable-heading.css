@@ -1,17 +1,18 @@
-.editable-text {
+wysiwyg-editable-heading {
   position: relative;
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
   transition: all 350ms;
+  display: block;
 }
 
-.editable-text:hover {
+wysiwyg-editable-heading:hover {
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
   border-color: rgb(218, 220, 224);
 }
 
-.editable-text.active {
+wysiwyg-editable-heading[active] {
   margin-bottom: 1rem;
   background-color: #f4f4f4;
   border-color: rgba(0, 0, 0, 0.5);
@@ -32,7 +33,7 @@
   transition: all 350ms;
 }
 
-.editable-text.active .edit-button {
+wysiwyg-editable-heading[active] .edit-button {
   display: none;
 }
 
@@ -41,10 +42,11 @@
   opacity: 1;
 }
 
-.editable-text:hover .edit-button {
+wysiwyg-editable-heading:hover .edit-button {
   opacity: 1;
 }
 
-.editable-text.active .save-button {
+wysiwyg-editable-heading[active] .save-button {
   display: inline-block;
 }
+
